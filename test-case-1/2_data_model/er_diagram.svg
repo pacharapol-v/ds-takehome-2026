@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="630" viewBox="0 0 800 630" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="800" height="630" fill="#ffffff"/>
+
+  <!-- relationship lines (drawn first so boxes sit on top) -->
+  <g stroke="#64748b" stroke-width="1.6" fill="none">
+    <line x1="360" y1="166" x2="185" y2="300"/>
+    <line x1="440" y1="166" x2="615" y2="300"/>
+  </g>
+  <g font-size="12" fill="#475569" font-style="italic" style="paint-order:stroke" stroke="#ffffff" stroke-width="4">
+    <text x="262" y="230" text-anchor="end">sells</text>
+    <text x="537" y="230">evaluated monthly</text>
+  </g>
+
+  <!-- dim_agent -->
+  <g>
+    <rect x="255" y="40" width="290" height="126" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M255,76 V46 Q255,40 261,40 H539 Q545,40 545,46 V76 Z" fill="#334155"/>
+    <text x="269" y="64" font-size="15" font-weight="700" fill="#ffffff">dim_agent</text>
+    <rect x="267" y="88" width="26" height="16" rx="3" fill="#fef3c7"/><text x="280" y="99" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PK</text>
+    <text x="331" y="100" font-size="14" fill="#0f172a">employee_id</text><text x="531" y="100" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <text x="331" y="126" font-size="14" fill="#0f172a">name</text><text x="531" y="126" font-size="12" fill="#64748b" text-anchor="end">varchar</text>
+    <text x="331" y="152" font-size="14" fill="#0f172a">is_active</text><text x="531" y="152" font-size="12" fill="#64748b" text-anchor="end">boolean</text>
+  </g>
+
+  <!-- fact_policy -->
+  <g>
+    <rect x="40" y="300" width="290" height="152" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M40,336 V306 Q40,300 46,300 H324 Q330,300 330,306 V336 Z" fill="#334155"/>
+    <text x="54" y="324" font-size="15" font-weight="700" fill="#ffffff">fact_policy</text>
+    <rect x="52" y="348" width="26" height="16" rx="3" fill="#fef3c7"/><text x="65" y="359" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PK</text>
+    <text x="116" y="360" font-size="14" fill="#0f172a">policy_id</text><text x="316" y="360" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <rect x="52" y="374" width="26" height="16" rx="3" fill="#dbeafe"/><text x="65" y="385" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">FK</text>
+    <text x="116" y="386" font-size="14" fill="#0f172a">employee_id</text><text x="316" y="386" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <text x="116" y="412" font-size="14" fill="#0f172a">issue_date</text><text x="316" y="412" font-size="12" fill="#64748b" text-anchor="end">date</text>
+    <text x="116" y="438" font-size="14" fill="#0f172a">premium</text><text x="316" y="438" font-size="12" fill="#64748b" text-anchor="end">decimal</text>
+  </g>
+
+  <!-- agent_monthly_kpi (core table) -->
+  <g>
+    <rect x="470" y="300" width="290" height="282" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+    <path d="M470,336 V306 Q470,300 476,300 H754 Q760,300 760,306 V336 Z" fill="#0f766e"/>
+    <text x="484" y="324" font-size="15" font-weight="700" fill="#ffffff">agent_monthly_kpi</text>
+    <rect x="482" y="348" width="26" height="16" rx="3" fill="#fef3c7"/><text x="495" y="359" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PK</text>
+    <rect x="512" y="348" width="26" height="16" rx="3" fill="#dbeafe"/><text x="525" y="359" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">FK</text>
+    <text x="546" y="360" font-size="14" fill="#0f172a">employee_id</text><text x="746" y="360" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <rect x="482" y="374" width="26" height="16" rx="3" fill="#fef3c7"/><text x="495" y="385" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PK</text>
+    <text x="546" y="386" font-size="14" fill="#0f172a">kpi_month</text><text x="746" y="386" font-size="12" fill="#64748b" text-anchor="end">date</text>
+    <text x="546" y="412" font-size="14" fill="#0f172a">total_premium</text><text x="746" y="412" font-size="12" fill="#64748b" text-anchor="end">decimal</text>
+    <text x="546" y="438" font-size="14" fill="#0f172a">new_policy_count</text><text x="746" y="438" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <text x="546" y="464" font-size="14" fill="#0f172a">is_pass</text><text x="746" y="464" font-size="12" fill="#64748b" text-anchor="end">boolean</text>
+    <text x="546" y="490" font-size="14" fill="#0f172a">pass_streak</text><text x="746" y="490" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <text x="546" y="516" font-size="14" fill="#0f172a">fail_streak</text><text x="746" y="516" font-size="12" fill="#64748b" text-anchor="end">int</text>
+    <text x="546" y="542" font-size="14" fill="#0f172a">contract_type</text><text x="746" y="542" font-size="12" fill="#64748b" text-anchor="end">varchar</text>
+    <text x="546" y="568" font-size="14" fill="#0f172a">contract_action</text><text x="746" y="568" font-size="12" fill="#64748b" text-anchor="end">varchar</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="12" fill="#475569">
+    <rect x="40" y="532" width="26" height="16" rx="3" fill="#fef3c7"/><text x="53" y="543" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PK</text>
+    <text x="74" y="544">primary key</text>
+    <rect x="40" y="558" width="26" height="16" rx="3" fill="#dbeafe"/><text x="53" y="569" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">FK</text>
+    <text x="74" y="570">foreign key</text>
+    <rect x="40" y="584" width="26" height="16" rx="3" fill="#0f766e"/>
+    <text x="74" y="596">core table: monthly validation result</text>
+  </g>
+</svg>

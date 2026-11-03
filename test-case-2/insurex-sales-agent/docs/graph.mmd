@@ -1,0 +1,61 @@
+﻿---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	prepare_turn(prepare_turn)
+	route(route)
+	extract_lead(extract_lead)
+	lead_next_step(lead_next_step)
+	save_lead(save_lead)
+	cancel_lead(cancel_lead)
+	retrieve(retrieve)
+	grade_documents(grade_documents)
+	rewrite_query(rewrite_query)
+	generate(generate)
+	verify_answer(verify_answer)
+	finalize_answer(finalize_answer)
+	no_answer(no_answer)
+	smalltalk(smalltalk)
+	catalog(catalog)
+	unknown_plan(unknown_plan)
+	out_of_scope(out_of_scope)
+	finalize(finalize)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> prepare_turn;
+	cancel_lead --> finalize;
+	catalog --> finalize;
+	extract_lead -.-> lead_next_step;
+	extract_lead -.-> retrieve;
+	finalize_answer --> finalize;
+	generate --> verify_answer;
+	grade_documents -.-> generate;
+	grade_documents -.-> no_answer;
+	grade_documents -.-> rewrite_query;
+	lead_next_step --> finalize;
+	no_answer --> finalize;
+	out_of_scope --> finalize;
+	prepare_turn --> route;
+	retrieve --> grade_documents;
+	rewrite_query --> retrieve;
+	route -.-> cancel_lead;
+	route -.-> catalog;
+	route -.-> extract_lead;
+	route -.-> out_of_scope;
+	route -.-> retrieve;
+	route -.-> save_lead;
+	route -.-> smalltalk;
+	route -.-> unknown_plan;
+	save_lead --> finalize;
+	smalltalk --> finalize;
+	unknown_plan --> finalize;
+	verify_answer -.-> finalize_answer;
+	verify_answer -.-> generate;
+	verify_answer -.-> no_answer;
+	finalize --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+

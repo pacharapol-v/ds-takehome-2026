@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "insurex_sales_agent": "./insurex_agent/agent/studio.py:graph"
+  },
+  "env": ".env"
+}

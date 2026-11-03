@@ -1,0 +1,3 @@
+# Local open-source embeddings (e.g. EMBEDDING_PROVIDER=huggingface EMBEDDING_MODEL=BAAI/bge-m3)
+langchain-huggingface
+sentence-transformers

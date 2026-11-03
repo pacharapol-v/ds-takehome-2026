@@ -1,0 +1,33 @@
+# Python 3.11+ (developed and tested on 3.13)
+# --- LLM orchestration ---
+langchain==1.4.7
+langchain-core==1.7.3
+langgraph==1.2.19
+langgraph-checkpoint-sqlite==3.1.3   # persistent session memory (AsyncSqliteSaver)
+aiosqlite==0.22.1
+# --- model providers (install all; choose one via LLM_PROVIDER / EMBEDDING_PROVIDER) ---
+langchain-openai==1.7.3
+langchain-google-genai==4.4.2
+langchain-anthropic==1.7.7
+langchain-ollama==1.1.0
+# --- vector DB + retrieval ---
+chromadb==1.5.9
+langchain-chroma==1.1.0
+rank-bm25==0.2.2
+scikit-learn==1.9.1                  # offline LSA embedder (tests / no-key mode)
+numpy==2.5.4
+joblib==1.6.0
+# --- PDF + Thai NLP ---
+pymupdf==2.0
+pythainlp==5.4.0
+# --- MCP (lead tools) ---
+mcp==1.30.0
+langchain-mcp-adapters==0.3.2
+# --- config / validation / CLI ---
+pydantic==2.14.2
+pydantic-settings==2.16.2
+python-dotenv==1.2.4
+rich==15.0.0
+# --- tests ---
+pytest==9.2.0
+pytest-asyncio==1.4.1

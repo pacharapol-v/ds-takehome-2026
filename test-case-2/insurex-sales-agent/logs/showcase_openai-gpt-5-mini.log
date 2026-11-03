@@ -1,0 +1,169 @@
+# InsureX Sales Agent showcase - 2026-11-03T14:43:42
+# LLM: openai:gpt-5-mini | embeddings: openai:text-embedding-3-small | leads backend: mcp | fresh state folder
+
+[somchai-th] (session start) BOT : สวัสดีครับ ผมคือ InsureX Assistant ผู้ช่วย AI ด้านประกันชีวิตของ InsureX
+                                    
+                                    ผมช่วยคุณได้ดังนี้ครับ
+                                    1. ตอบคำถามเกี่ยวกับแผนประกันชีวิต 5 แบบ เช่น ความคุ้มครอง เงื่อนไขการรับประกัน และตัวอย่างเบี้ย พร้อมอ้างอิงหน้าโบรชัวร์
+                                      • คุ้มชีวา 90/10
+                                      • คุ้มชีวี เอ็กซ์ตร้า 99/10, 99/15, 99/20
+                                      • ตลอดชีพ 99/99
+                                      • ตลอดชีพ 90/20
+                                      • คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15)
+                                    2. เปรียบเทียบแผนประกันให้เห็นความแตกต่าง
+                                    3. ประสานให้ตัวแทนติดต่อกลับ เพียงพิมพ์ 'สนใจ'
+                                    
+                                    ตัวอย่างคำถาม: "ตลอดชีพ 90/20 ผู้หญิงอายุ 35 ทุน 500,000 จ่ายปีละเท่าไหร่"
+                                    
+                                    วันนี้ให้ผมช่วยเรื่องไหนดีครับ
+                                    (You can also ask in English.)
+
+[somchai-th] USER: ประกันรถมีมั้ย
+[somchai-th] BOT : ขออภัยครับ ผมไม่พบข้อมูลเรื่องนี้ในเอกสารผลิตภัณฑ์ที่มีอยู่ (คุ้มชีวา 90/10, คุ้มชีวี เอ็กซ์ตร้า 99/10, 99/15, 99/20, ตลอดชีพ 99/99, ตลอดชีพ 90/20, คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15)) จึงขอไม่ตอบแบบคาดเดานะครับ แนะนำสอบถาม InsureX Contact Center 1314 หรือพิมพ์ 'สนใจ' เพื่อให้ตัวแทนติดต่อกลับได้เลยครับ
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:0/4 → rewrite_query → retrieve#2 → grade_documents:0/4 → no_answer:not_found → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": [], "latency_ms": 12447}
+
+[somchai-th] USER: แล้วมีประกันอะไรบ้าง
+[somchai-th] BOT : InsureX มีแผนประกันชีวิต 5 แบบครับ
+                   - คุ้มชีวา 90/10: ประกันชีวิตตลอดชีพคุ้มครองถึงอายุ 90 ปี ชำระเบี้ย 10 ปี แนบความคุ้มครองอุบัติเหตุ โรคร้ายแรง และมะเร็ง
+                   - คุ้มชีวี เอ็กซ์ตร้า 99/10, 99/15, 99/20: ประกันชีวิตตลอดชีพถึงอายุ 99 ปี มีเงินคืนทุกปี 1% และเงินปันผล เลือกชำระเบี้ย 10, 15 หรือ 20 ปี
+                   - ตลอดชีพ 99/99: ประกันชีวิตตลอดชีพคุ้มครองและชำระเบี้ยถึงอายุ 99 ปี ครบสัญญารับ 101% ของทุนประกัน
+                   - ตลอดชีพ 90/20: ประกันชีวิตตลอดชีพคุ้มครองถึงอายุ 90 ปี ชำระเบี้ย 20 ปี ครบสัญญารับ 100% ของทุนประกัน
+                   - คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15): ประกันชีวิตแบบชั่วระยะเวลา คุ้มครอง 5, 10 หรือ 15 ปี ทุนประกันสูง เบี้ยต่ำ เบี้ยคงที่ตามอายุแรกเข้า
+                   
+                   สนใจแผนไหน ถามรายละเอียดเพิ่มได้เลยครับ เช่น ความคุ้มครอง เงื่อนไข หรือตัวอย่างเบี้ย หรือพิมพ์ 'สนใจ' เพื่อให้ตัวแทนติดต่อกลับ
+          {"intent": "catalog", "trace": "prepare_turn → route → catalog → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["khum_cheeva_90_10", "khum_cheevee_extra_99", "whole_life_99_99", "whole_life_90_20", "khum_manjai_sure_term"], "latency_ms": 4508}
+
+[somchai-th] USER: 90/20 คืออะไร
+[somchai-th] BOT : ตลอดชีพ 90/20 คือแบบประกันชีวิตตลอดชีพ ที่ชำระเบี้ย 20 ปี และให้ความคุ้มครองยาวถึงอายุ 90 ปี ครับ [3][1].
+                   
+                   - อายุรับประกันภัย: 1 เดือน 1 วัน – 65 ปี [1].
+                   - ระยะเวลาคุ้มครอง: ถึงอายุ 90 ปี (ประกันชีวิตตลอดชีพ) [1][3].
+                   - ระยะเวลาชำระเบี้ย: 20 ปี (ชำระเบี้ยประกันภัย) [1][2].
+                   - ผลประโยชน์ความคุ้มครอง: จ่าย 100% ของจำนวนเงินเอาประกันภัย หรือเบี้ยที่ชำระมาแล้ว แล้วแต่จำนวนใดจะมากกว่า; เงินครบกำหนดสัญญา รับ 100% ของจำนวนเงินเอาประกันภัย [2].
+                   - คุณสมบัติเด่นเพิ่มเติม: เบี้ยคงที่ตามอายุแรกเข้า และมีสิทธิลดหย่อนภาษีสูงสุด 100,000 บาทตามเงื่อนไขกรมสรรพากร [3].
+                   
+                   หากต้องการตัวอย่างเบี้ยหรือคำนวณตามอายุ/เพศ/ทุนประกัน กรุณาแจ้งหรือติดต่อผู้แทนเพื่อเสนอราคาให้ครับ (เอกสารมีเฉพาะข้อมูลทั่วไปและตัวอย่างในบางหน้า)
+                   
+                   แหล่งข้อมูล:
+                   [1] ตลอดชีพ 90/20 – เงื่อนไขการรับประกันภัย (ไฟล์ whole_life_90_20.pdf หน้า 2)
+                   [2] ตลอดชีพ 90/20 – ผลประโยชน์ความคุ้มครอง (ไฟล์ whole_life_90_20.pdf หน้า 2)
+                   [3] ตลอดชีพ 90/20 – ภาพรวมและจุดเด่นของแบบประกัน (ไฟล์ whole_life_90_20.pdf หน้า 1)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:3/4 → generate#1 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["whole_life_90_20"], "latency_ms": 23037}
+
+[john-en] (session start) BOT : สวัสดีครับ ผมคือ InsureX Assistant ผู้ช่วย AI ด้านประกันชีวิตของ InsureX
+                                 
+                                 ผมช่วยคุณได้ดังนี้ครับ
+                                 1. ตอบคำถามเกี่ยวกับแผนประกันชีวิต 5 แบบ เช่น ความคุ้มครอง เงื่อนไขการรับประกัน และตัวอย่างเบี้ย พร้อมอ้างอิงหน้าโบรชัวร์
+                                   • คุ้มชีวา 90/10
+                                   • คุ้มชีวี เอ็กซ์ตร้า 99/10, 99/15, 99/20
+                                   • ตลอดชีพ 99/99
+                                   • ตลอดชีพ 90/20
+                                   • คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15)
+                                 2. เปรียบเทียบแผนประกันให้เห็นความแตกต่าง
+                                 3. ประสานให้ตัวแทนติดต่อกลับ เพียงพิมพ์ 'สนใจ'
+                                 
+                                 ตัวอย่างคำถาม: "ตลอดชีพ 90/20 ผู้หญิงอายุ 35 ทุน 500,000 จ่ายปีละเท่าไหร่"
+                                 
+                                 วันนี้ให้ผมช่วยเรื่องไหนดีครับ
+                                 (You can also ask in English.)
+
+[john-en] USER: hi, do you have term life insurance?
+[john-en] BOT : Yes. We offer a term life product called คุ้มมั่นใจชัวร์ (Khum Manjai Sure Term) available in 5/5, 10/10 and 15/15 options. [4]
+                
+                Key points:
+                - Product type: term life (คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา 5/5, 10/10, 15/15). [4]
+                - Coverage durations: 5, 10 or 15 years (coverage period = premium payment period). [1][2]
+                - Coverage amount: pays 100% of the sum insured during the chosen term. [1]
+                - Entry ages (age at acceptance): 20–60 for 5/5; 20–55 for 10/10; 20–50 for 15/15. [2]
+                - Minimum sum insured: 300,000 THB (minimum premium 2,000 THB/year). [2]
+                - Premium payment mode: annual; premiums are level based on the entry age (not adjusted as age increases). [2][3]
+                
+                For an exact premium quote for your age, gender, sum insured and occupation class, please contact an agent — they can provide personalised pricing. [2]
+                
+                Sources:
+                [4] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – ข้อมูลสรุปผลิตภัณฑ์ (ไฟล์ khum_manjai_sure_term.pdf หน้า 1)
+                [1] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – ผลประโยชน์ความคุ้มครอง (ไฟล์ khum_manjai_sure_term.pdf หน้า 2)
+                [2] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – เงื่อนไขการรับประกันภัย (ไฟล์ khum_manjai_sure_term.pdf หน้า 3)
+                [3] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – ภาพรวมและจุดเด่นของแบบประกัน (ไฟล์ khum_manjai_sure_term.pdf หน้า 1)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:4/4 → generate#1 → verify_answer:fail → generate#2 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["khum_manjai_sure_term"], "latency_ms": 26876}
+
+[somchai-th] USER: ผมอายุ 35 ต้องจ่ายปีละเท่าไหร่
+[somchai-th] BOT : ตัวอย่างเบี้ยประกันภัยสำหรับแบบ ตลอดชีพ 90/20 อายุ 35 ปี (ตัวอย่างในเอกสาร): [เพศและทุนประกันต้องตรงตามตัวอย่างดังนี้] ครับ [1]
+                   
+                   - เพศชาย อายุ 35 ปี: แผน 1 (ทุน 200,000 บาท) = 5,280 บาท/ปี; แผน 2 (ทุน 300,000 บาท) = 7,920 บาท/ปี; แผน 3 (ทุน 500,000 บาท) = 12,700 บาท/ปี; แผน 4 (ทุน 1,000,000 บาท) = 25,400 บาท/ปี [1].
+                   - เพศหญิง อายุ 35 ปี: แผน 1 (ทุน 200,000 บาท) = 4,460 บาท/ปี; แผน 2 (ทุน 300,000 บาท) = 6,690 บาท/ปี; แผน 3 (ทุน 500,000 บาท) = 10,650 บาท/ปี; แผน 4 (ทุน 1,000,000 บาท) = 21,300 บาท/ปี [1].
+                   
+                   ถ้าต้องการใบเสนอราคาตามเพศ/อาชีพ/ทุนอื่น หรือตัวเลขที่แม่นยำตามโปรไฟล์ของคุณ โปรดติดต่อผู้แทนเพื่อเสนอราคาให้ครับ (เอกสารมีเฉพาะตัวอย่างเท่าที่อ้างอิง)
+                   
+                   แหล่งข้อมูล:
+                   [1] ตลอดชีพ 90/20 – ตัวอย่างเบี้ยประกันภัยรายปี (ไฟล์ whole_life_90_20.pdf หน้า 2)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:1/4 → generate#1 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["whole_life_90_20"], "latency_ms": 11075}
+
+[john-en] USER: how long does it cover?
+[john-en] BOT : Short answer: Coverage is for the term you choose — 5 years, 10 years or 15 years. [1][2]
+                
+                Details:
+                - Coverage amount: 100% of the sum insured during the chosen term (5/5, 10/10 or 15/15). [1]
+                - Coverage period = premium payment period (so if you pick 5 years you are covered for 5 years; likewise 10 or 15 years). [2]
+                - Entry-age (age at acceptance) by plan: 20–60 for 5/5; 20–55 for 10/10; 20–50 for 15/15. [2]
+                - Premiums are level based on the entry age (do not increase as age rises). [3]
+                
+                If you want an exact quote for your age, gender, sum insured and occupation class, please contact an agent. [2]
+                
+                Sources:
+                [1] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – ผลประโยชน์ความคุ้มครอง (ไฟล์ khum_manjai_sure_term.pdf หน้า 2)
+                [2] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – เงื่อนไขการรับประกันภัย (ไฟล์ khum_manjai_sure_term.pdf หน้า 3)
+                [3] คุ้มมั่นใจชัวร์ แบบชั่วระยะเวลา (5/5, 10/10, 15/15) – ภาพรวมและจุดเด่นของแบบประกัน (ไฟล์ khum_manjai_sure_term.pdf หน้า 1)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:4/4 → generate#1 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["khum_manjai_sure_term"], "latency_ms": 14640}
+
+[somchai-th] USER: จ่ายรายเดือนได้มั้ย
+[somchai-th] BOT : ได้ครับ — แบบ ตลอดชีพ 90/20 สามารถเลือกชำระเบี้ยแบบรายเดือนได้ [1].
+                   
+                   - งวดการชำระเบี้ยที่ระบุในเอกสาร: รายปี / ราย 6 เดือน / ราย 3 เดือน / รายเดือน [1].
+                   
+                   แหล่งข้อมูล:
+                   [1] ตลอดชีพ 90/20 – เงื่อนไขการรับประกันภัย (ไฟล์ whole_life_90_20.pdf หน้า 2)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:1/4 → generate#1 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["whole_life_90_20"], "latency_ms": 10075}
+
+[somchai-th] USER: แล้วถ้าเทียบกับ 99/99 ล่ะ ต่างกันยังไง
+[somchai-th] BOT : สรุปความแตกต่างระหว่าง ตลอดชีพ 90/20 กับ ตลอดชีพ 99/99 สั้นๆ ดังนี้ครับ
+                   
+                   - ตลอดชีพ 90/20: ให้ความคุ้มครองถึงอายุ 90 ปี และชำระเบี้ยเป็นระยะเวลา 20 ปี (ครบสัญญารับ 100% ของจำนวนเงินเอาประกันภัย) [1][2].
+                   - ตลอดชีพ 99/99: ให้ความคุ้มครองและชำระเบี้ยจนถึงอายุ 99 ปี (ครบสัญญารับ 101% ของจำนวนเงินเอาประกันภัย) และสามารถเลือกเพิ่มความคุ้มครองสุขภาพ อุบัติเหตุ โรคร้ายแรง ได้ตามต้องการ [4][3].
+                   
+                   หากต้องการรายละเอียดเบี้ยหรือเปรียบเทียบตัวอย่างค่าเบี้ยตามอายุ/เพศ/ทุนประกัน กรุณาติดต่อผู้แทนเพื่อขอใบเสนอราคาครับ [1][4].
+                   
+                   แหล่งข้อมูล:
+                   [1] ตลอดชีพ 90/20 – ข้อมูลสรุปผลิตภัณฑ์ (ไฟล์ whole_life_90_20.pdf หน้า 1)
+                   [2] ตลอดชีพ 90/20 – ผลประโยชน์ความคุ้มครอง (ไฟล์ whole_life_90_20.pdf หน้า 2)
+                   [3] ตลอดชีพ 99/99 – ภาพรวมและจุดเด่นของแบบประกัน (ไฟล์ whole_life_99_99.pdf หน้า 1)
+                   [4] ตลอดชีพ 99/99 – ข้อมูลสรุปผลิตภัณฑ์ (ไฟล์ whole_life_99_99.pdf หน้า 1)
+          {"intent": "product_question", "trace": "prepare_turn → route → retrieve#1 → grade_documents:4/4 → generate#1 → verify_answer:ok → finalize_answer → finalize", "mode": "qa", "lead_status": "none", "lead": null, "lead_id": null, "active_products": ["whole_life_90_20", "whole_life_99_99"], "latency_ms": 14418}
+
+[somchai-th] USER: โอเค สนใจ 90/20
+[somchai-th] BOT : ยินดีเลยครับ เพื่อให้ตัวแทนของ InsureX ติดต่อกลับไปให้ข้อมูลแผน ตลอดชีพ 90/20 และนำเสนอแผนที่เหมาะกับคุณ รบกวนขอข้อมูลต่อไปนี้ครับ: ชื่อ-นามสกุล, อาชีพ, รายได้ต่อเดือน, เบอร์โทรศัพท์ติดต่อ
+          {"intent": "purchase_interest", "trace": "prepare_turn → route → extract_lead → lead_next_step → finalize", "mode": "lead_collection", "lead_status": "collecting", "lead": {"product_interest": "whole_life_90_20"}, "lead_id": null, "active_products": ["whole_life_90_20"], "latency_ms": 3897}
+
+[somchai-th] USER: สมชาย ใจดี วิศวกร 50000บาท 0812345678
+[somchai-th] BOT : รบกวนตรวจสอบข้อมูลครับ
+                   - ชื่อ: สมชาย ใจดี
+                   - อาชีพ: วิศวกร
+                   - รายได้: 50,000 บาท/เดือน
+                   - เบอร์ติดต่อ: 0812345678
+                   - ผลิตภัณฑ์ที่สนใจ: ตลอดชีพ 90/20
+                   
+                   ยืนยันว่าข้อมูลถูกต้อง และยินยอมให้ InsureX ติดต่อกลับเพื่อนำเสนอผลิตภัณฑ์ประกัน (ตาม พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล) ใช่ไหมครับ? พิมพ์ 'ยืนยัน' หรือแจ้งส่วนที่ต้องการแก้ไขได้เลยครับ
+          {"intent": "provide_info", "trace": "prepare_turn → route → extract_lead → lead_next_step → finalize", "mode": "lead_collection", "lead_status": "awaiting_confirmation", "lead": {"product_interest": "whole_life_90_20", "full_name": "สมชาย ใจดี", "occupation": "วิศวกร", "phone": "0812345678", "monthly_income": 50000.0, "income_text": "50000บาท"}, "lead_id": null, "active_products": ["whole_life_90_20"], "latency_ms": 5177}
+
+[somchai-th] USER: ยืนยัน
+[somchai-th] BOT : ขอบคุณครับคุณสมชาย ใจดี บันทึกข้อมูลเรียบร้อยแล้ว (เลขอ้างอิง LD-D365B26007) ตัวแทนของ InsureX จะติดต่อกลับที่เบอร์ 0812345678 เรื่องแผน ตลอดชีพ 90/20 ครับ มีอะไรให้ช่วยเพิ่มเติมไหมครับ
+          {"intent": "confirm", "trace": "prepare_turn → summarize_history → route → save_lead → mcp:created → finalize", "mode": "qa", "lead_status": "saved", "lead": {"product_interest": "whole_life_90_20", "full_name": "สมชาย ใจดี", "occupation": "วิศวกร", "phone": "0812345678", "monthly_income": 50000.0, "income_text": "50000บาท"}, "lead_id": "LD-D365B26007", "active_products": ["whole_life_90_20"], "latency_ms": 8903}
+
+## Session isolation check
+  somchai-th: messages=9 mode=qa lead_status=saved lead_id=LD-D365B26007 active_products=['whole_life_90_20']
+  john-en: messages=4 mode=qa lead_status=none lead_id=None active_products=['khum_manjai_sure_term']
+
+## Leads stored in SQLite, read back via the MCP tool `list_leads`
+  {"lead_id": "LD-D365B26007", "session_id": "somchai-th", "full_name": "สมชาย ใจดี", "occupation": "วิศวกร", "monthly_income": 50000.0, "income_text": "50000บาท", "phone": "0812345678", "product_interest": "whole_life_90_20", "consent": 1, "created_at": "2026-11-03T07:45:59+00:00"}
+
+# transcript: logs\showcase_openai-gpt-5-mini.log
